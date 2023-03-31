@@ -1,0 +1,39 @@
+.cardDF{
+    background-color: white;
+    margin: 15em auto;
+    padding: 3px 25px;  
+    width: fit-content;
+    height: fit-content;
+    border-radius: 1em;
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+      box-shadow: 10px 10px 5px 0px rgba(32, 33, 23, 0.75); 
+
+}
+
+.cardI{
+  background-color: rgba(172, 255, 47, 0.652);
+  padding: 1px 4px;
+  display: flex;
+  width: fit-content;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.cardN{
+  background-color: rgba(172, 255, 47, 0.652);
+  padding: 3px 3px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid;
+}
+
+.Loading{
+  display: flex;
+  background-color: rgba(172, 255, 47, 0.652);
+  justify-content: center;
+  margin: 10em auto;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+}

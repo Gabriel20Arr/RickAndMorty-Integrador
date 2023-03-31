@@ -1,0 +1,57 @@
+.Boton {
+    background-color: rgb(1, 202, 82);
+    font-size: medium;
+    padding: 4px 4px;
+    border-radius: 3px;
+    border: 1px solid;
+    margin-top: 3px;
+}
+
+.Boton:hover {
+    border: 2px solid;
+    border-color: black;
+    border-radius: 3px;
+}
+
+.Boton2 {
+    font-size: medium;
+    padding: 4px 4px;
+    border-radius: 3px;
+    border: 1px solid;
+}
+
+/* .navHome{
+    background-color: green;
+   padding: 1em;
+   display: flex;
+   flex-direction: row; 
+   justify-content: end;
+   margin-bottom: 1em;
+   margin: auto;
+   margin-left: 25px;
+    margin-right: 25px;
+}
+
+.navDetail{
+    background-color: green;
+   padding: 1em;
+   display: flex;
+   flex-direction: row; 
+   justify-content: end;
+   margin-bottom: 1em;
+   margin: auto;
+   margin-left: 25px;
+   margin-right: 25px;
+}
+.navAbout{
+    background-color: green;
+   padding: 1em;
+   display: flex;
+   flex-direction: row; 
+   justify-content: end;
+   margin-bottom: 1em;
+   margin: auto;
+   margin-left: 25px;
+    margin-right: 25px;
+} */
+

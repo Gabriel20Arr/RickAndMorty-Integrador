@@ -1,0 +1,8 @@
+.fav{
+    width: max-content;
+    height: max-content;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    width: 100vh;
+}
