@@ -15,5 +15,7 @@
   "bugs": {
     "url": "https://github.com/Gabriel20Arr/proyectoIntegrado-R-A_M/issues"
   },
-  "homepage": "https://github.com/Gabriel20Arr/proyectoIntegrado-R-A_M#readme"
+  "homepage": "https://github.com/Gabriel20Arr/proyectoIntegrado-R-A_M#readme",
+  "dependencies": {
+  }
 }

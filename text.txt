@@ -1,0 +1,6 @@
+Para probar el proyecto se necesita los requisitos:
+- usuario de posgres 
+- password de posgres
+- host: localhost
+- port: 5432
+
