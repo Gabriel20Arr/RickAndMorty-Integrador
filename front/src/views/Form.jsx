@@ -1,7 +1,6 @@
 import styled from "../views/Form.module.css";
 import { useState } from "react";
-import validation from "./validation";
-
+import validation from "../views/validaciones/validation";
 
 // const validate = (form, setErrors, errors) => {
 //   if (!form.email) setErrors({ ...errors, email: "Email vacío" });
@@ -14,12 +13,12 @@ import validation from "./validation";
 
 const Form = ({ login }) => {
   const [userData, setUserData] = useState({
-    username: "",
+    email: "",
     password: "",
   });
 
   const [errors, setErrors] = useState({
-    username: "",
+    email: "",
     password: "",
   });
 
@@ -37,43 +36,49 @@ const Form = ({ login }) => {
   };
 
   return (
-    <div>
-      <div>
-        <p className={styled.navv}>Register to enter the page!</p>
-      </div>
+    <div className={styled.conteiner11}>
+      <p className={styled.navv}>Register to enter the page!</p>
 
-
-      <form onSubmit={submitHandler} style={{ color: "green" }} className={styled.formP}>
-
-        <h2 className={styled.login}>Login</h2>
+      <form
+        onSubmit={submitHandler}
+        // style={{ color: "red" }}
+        className={styled.formP}
+      >
+        <h2 className={styled.login}>Log in</h2>
 
         <div className={styled.fgmail}>
-          {/* <label htmlFor="">Email:</label> */}
+          {/* <label htmlFor="">Email</label> */}
           <input
             placeholder="Enter your email"
             type="text"
             name="email"
             value={userData.email}
             onChange={handleChange}
-          // className={errors.email ? style.error : style.success}
+            // className={errors.email ? style.error : style.success}
           />
+          <p className={styled.p}> {errors.email} </p>
         </div>
 
         <div className={styled.fpassword}>
-          {/* <label htmlFor="">Password:</label> */}
+          {/* <label htmlFor="">Password</label> */}
           <input
             placeholder="Enter your password"
-            type="Password"
+            type="text"
             name="password"
-              value={userData.password}
+            value={userData.password}
             onChange={handleChange}
           />
+          {/* <p style={{ color: "red" }}>{errors.password}</p> */}
         </div>
 
         <button className={styled.fButton} type="submit">
           Login
         </button>
       </form>
+
+      <p className={styled.footer}>
+        Credenciales: gabriel@gmail.com - mipass123
+      </p>
     </div>
   );
 };

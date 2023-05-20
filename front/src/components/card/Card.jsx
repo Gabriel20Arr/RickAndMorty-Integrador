@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "./Card.module.css";
 
-import { removePersFav ,getFavorite } from "../../redux/actions";
+import { agregarPersFav, removePersFav } from "../../redux/actions";
 import { connect, useDispatch } from "react-redux";
 import React from "react";
 import { useState, useEffect } from "react";
@@ -13,13 +13,13 @@ function Card({ id, name, species, gender, image, onClose, myFavorites }) {
 
   const agregarPersFav = (personaje) => {
     axios
-      .post("http://localhost:3001/rickandmorty/fav", personaje)
+      .post("http://localhost:3001/rickandmorty/favv", personaje)
       .then((res) => console.log("ok"));
   };
 
   const removePersFav = async (id) => {
-    await axios(`http://localhost:3001/rickandmorty/fav/${id}`);
-    dispatch(getFavorite());
+    await axios(`http://localhost:3001/rickandmorty/favv/${id}`);
+    dispatch(agregarPersFav());
     alert("Eliminado con exito");
   };
 
@@ -46,34 +46,35 @@ function Card({ id, name, species, gender, image, onClose, myFavorites }) {
   return (
     <div className={styled.card}>
       <div className={styled.fondoX}>
-        <button onClick={() => onClose(id)} className={styled.botonx}>
-          x
-        </button>
+        <div className={styled.fondoO}>
+          <button className={styled.Fav} onClick={handleFavorite}>
+            {isFav ? "❤️" : "🤍"}
+          </button>
+
+          <button onClick={() => onClose(id)} className={styled.botonx}>
+            x
+          </button>
+        </div>
+        <h2 className={styled.h2Name}>{name}</h2>
       </div>
 
-      <Link to={`/detail/${id}`}>
-        <h2 className={styled.h2Name}>{name}</h2>
-      </Link>
+      <img src={image} alt="" className={styled.img} />
 
-      <img src={image} alt="" />
+      <NavLink to={`/detail/${id}`} className={styled.NavLink}>
+        <h2 className={styled.h2Detail}>Detail..</h2>
+      </NavLink>
 
-      <h3 className={styled.species}>Species: {species}</h3>
-      <h3 className={styled.gender}>Gende: {gender}</h3>
-
-      {isFav ? (
-        <button onClick={handleFavorite}>❤️</button>
-      ) : (
-        <button onClick={handleFavorite}>🤍</button>
-      )}
+      {/* <h3 className={styled.species}>Species: {species}</h3>
+      <h3 className={styled.gender}>Gende: {gender}</h3> */}
     </div>
   );
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    // agregarPersFav: (personaje) => {
-    //   dispatch(agregarPersFav(personaje));
-    // },
+    agregarPersFav: (personaje) => {
+      dispatch(agregarPersFav(personaje));
+    },
     removePersFav: (id) => {
       dispatch(removePersFav(id));
     },

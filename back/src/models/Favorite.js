@@ -6,12 +6,13 @@ module.exports = (sequelize) => {
     {
       id: {
         type: DataTypes.INTEGER,
-        allowNull: false,
         primaryKey: true,
+        // autoIncrement: true,
+        allowNull: false,
       },
       name: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       status: {
         type: DataTypes.ENUM("Alive", "Dead", "unknown"),

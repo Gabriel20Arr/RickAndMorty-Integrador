@@ -3,18 +3,14 @@ import About from "./views/About.jsx";
 import Detail from "./views/Detail.jsx";
 import "./App.css";
 import { useState, useEffect } from "react";
-import { Route, Routes, useLocation, useNavigate  } from "react-router-dom";
-// import { username, password } from "./views/Form";
-// import axios from 'axios';
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 
 import Nav from "./components/nav/Nav.jsx";
 import Cards from "./components/cards11/Cards.jsx";
 import Favorite from "./components/Favorite/Favorite.jsx";
-import validation from "./views/validation.js";
 
 function App() {
   const [character, setCharacter] = useState([]);
-  // const { pathname } = useLocation();
   const [access, setAccess] = useState(false);
   const navigate = useNavigate();
 
@@ -46,8 +42,12 @@ function App() {
     setCharacter(character.filter((char) => char.id !== id));
   };
 
-  const login = () => {
-    if (validation ) {
+  //! credenciales fake
+  const username = "gabriel@gmail.com";
+  const pass = "mipass123";
+
+  const login = ({ email, password }) => {
+    if (email === username && password === pass) {
       setAccess(true);
       navigate("/home");
     } else {
@@ -55,9 +55,8 @@ function App() {
     }
   };
 
-
-  const location = useLocation();
-  const locationForm = location.pathname === "/";
+  const { pathname } = useLocation();
+  const locationForm = pathname === "/";
 
   return (
     <div className="App" style={{ padding: "25px" }}>

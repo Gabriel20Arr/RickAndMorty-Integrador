@@ -28,14 +28,13 @@ const Detail = () => {
   }, [detailId]);
 
   return (
-    <div>
+    <div className={style.conteiner}>
       {character.name ? (
         <div className={style.cardDF}>
           <h2 className={style.cardN}>{character.name}</h2>
-          <p className={style.cardI}>{character.status}</p>
-          <p className={style.cardI}>{character.species}</p>
-          <p className={style.cardI}>{character.gender}</p>
-          <p className={style.cardI}>{character.origin?.name}</p>
+          <p className={style.card2}>{character.species}</p>
+          <p className={style.card3}>{character.gender}</p>
+          <p className={style.card4}>{character.origin?.name}</p>
           <img className={style.cardimg} src={character.image} alt="imagen" />
         </div>
       ) : (

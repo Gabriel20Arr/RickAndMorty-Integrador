@@ -1,8 +1,16 @@
-import { ADD_PERS, FILTER, GET_FAVORITE, ORDER, REMOVE_PERS } from "./actions";
+import {
+  ADD_PERS,
+  FILTER,
+  GET_FAVORITE,
+  REMOVE_FAV,
+  ORDER,
+  REMOVE_PERS,
+} from "./actions";
 
 const initialState = {
   myFavorites: [],
   allCharacters: [],
+  characters: [],
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -58,6 +66,13 @@ const rootReducer = (state = initialState, action) => {
 
     case GET_FAVORITE:
       return { ...state, myFavorites: action.payload };
+
+    case REMOVE_FAV:
+      return {
+        ...state,
+        myFavorites: action.payload,
+        allCharacters: action.payload,
+      };
 
     default:
       return { ...state };

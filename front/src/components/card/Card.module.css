@@ -1,76 +1,125 @@
+
+.card {
+    background-color:white;
+    position: relative;
+    padding: 10px 10px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    text-shadow: 6px 4px 7px rgba(0,0,0,0.6);
+
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    height: 21.5em;
+    width: 15em;
+}
+
 .fondoX{
-    background-color: bisque;
-    padding-right: 15px;
-    padding-top: 15px;
+    /* background-color: aqua; */
+    height: 5em;
+    width: 14em;
+}
+.fondoO{
+    background-color: rgb(0, 136, 255);
+    margin: 2px 2;
+    height: 2.5em;
+    width: 220px;
+    border-radius: 4px;
+    border: none;
+    border-bottom: solid 3px black;
 }
 
 .botonx{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+
     background-color: red;
-    border-radius: 5px;
-    margin-left: 93%;
-    margin-right: 1px;
-    margin-bottom: 13px;
-    display: flex;
-    justify-content: center;
-    width: fit-content;
-    height: fit-content;
+    width: 26px;
+    height: 26px;
     color: white;
     font-size: larger;
+    border-radius: 5px;
 
+    display: flex;
+    padding-top: 9px;
+    padding-bottom: 15px;
+    padding-left: 6px;
+    align-items: center;
+    /* align-self: center; */
 }
 
 .botonx:hover{
     box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.75);
 }
 
-.card {
-    background-color:white;
-    padding: 1em;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    text-shadow: 6px 4px 7px rgba(0,0,0,0.6);
+.Fav{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    
+    width: 26px;
+    height: 26px;
+    font-size: medium;
+    border-radius: 5px;
+
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    padding-top: 0px;
+    padding-bottom: 25px;
+    padding-left: 0px;
 }
 
 .h2Name{
-    background-color: bisque;
+    position: absolute;
+    top: 17%;
+    left: 19%;
+
+    background-color:white;
     font-size: medium;
-    /* margin: auto; */
-    padding-top: 10px;
-    padding-bottom: 10px;
+    margin: 0 auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 9.5em;
+    max-height: fit-content;
+    border: 1px solid;
+    border-radius: 3px;
+    color: black;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.img{
+    display: block;
+    border: solid 5px black;
+    border-radius: 2em;
+}
+
+.h2Detail{
+    position: absolute;
+    top: 92%;
+    left: 40%;
+
+    background-color: white;
+    font-size: medium;
+    margin: 0 auto;
     padding-left: 5px;
     padding-right: 5px;
     width: fit-content;
     height: fit-content;
-    border-radius: 2px solid;
+    border-radius: 2em;
+    border: 1px solid black;
 }
 
-.h2Name:hover{
-    box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.75);
+.h2Detail:hover{
+    box-shadow: 0px 2px 4px 4px rgba(0,0,0,0.75);
+    background-color:  rgb(4, 152, 251);
+    color: black;
+    border: none;
 }
 
-.gender{
-    background-color: bisque;
-    font-size: medium;
-    margin-top: 0px;
-    padding-top: 5px;
-    padding-bottom: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-
-.species{
-    background-color: bisque;
-    font-size: medium;
-    margin-bottom: 0px;
-    padding-top: 10px;
-    padding-bottom: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
+.NavLink{
+    color: inherit;
+    text-decoration: none;
 }

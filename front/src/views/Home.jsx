@@ -1,11 +1,14 @@
 // VISTA GENERAL - PRINCIPAL
-import Cards from "../components/cards11/Cards";
+import Card from "../components/card/Card";
+import styled from "../views/home.css";
 
 const Home = () => {
   return (
-    <div>
-      <h1>holaaaaaaaaaaa</h1>
-      <Cards />
+    <div className={styled.container}>
+      <Card />
+      <Card />
+      <Card />
+      <Card />
     </div>
   );
 };

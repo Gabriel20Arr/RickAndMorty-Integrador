@@ -8,6 +8,14 @@ const Favorite = () => {
   const favorites = useSelector((state) => state.myFavorites);
   const dispatch = useDispatch();
 
+  function HandleOrderCards(e) {
+    dispatch(orderCards(e.target.value));
+  }
+
+  function HandleFilterCards(e) {
+    dispatch(filterCards(e.target.value));
+  }
+
   return (
     <div>
       <div>
@@ -23,29 +31,17 @@ const Favorite = () => {
         </select>
       </div>
       <div className={style.fav}>
-        {favorites.map(({ id, name, species, gender, image }) => {
-          return (
-            <Card
-              key={id}
-              id={id}
-              name={name}
-              species={species}
-              gender={gender}
-              image={image}
-            />
-          );
+        {favorites.map(({ id, name, image }) => {
+          return <Card 
+                    key={id} 
+                    id={id} 
+                    name={name}
+                    image={image} 
+                   />;
         })}
       </div>
     </div>
   );
-
-  function HandleOrderCards(e) {
-    dispatch(orderCards(e.target.value));
-  }
-
-  function HandleFilterCards(e) {
-    dispatch(filterCards(e.target.value));
-  }
 };
 
 export default Favorite;

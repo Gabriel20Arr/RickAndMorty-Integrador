@@ -1,6 +1,14 @@
 .nosee {
-   background:url(../img/Rick-morty-9.jpg) no-repeat center center fixed;
-   
-   min-height: 100vh; 
+   background:url(../img/noooo.png)fixed center center no-repeat;
    background-size: cover;
+
+   justify-content: space-around;
+
+   /* @media (max-width: 414px) and (max-height: 896px) {
+      .contenedor {
+        justify-content: space-around;
+      }
+   } */
 }
+
+ 

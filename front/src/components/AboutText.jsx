@@ -2,7 +2,6 @@ const AboutText = () => {
   return (
     <>
       <p>
-        <h2>Rick y Morty</h2>
         Rick y Morty es una serie de televisión americana de animación para
         adultos creada por Justin Roiland y Dan Harmon en 2013 para Adult Swim,
         también se emitió en Cartoon Network. La serie sigue las desventuras de

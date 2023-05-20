@@ -14,7 +14,7 @@ server.use(cors());
 server.use("/", router);
 
 conn
-  .sync({ alter: true })
+  .sync({ force: false })
   .then((res) => {
     server.listen(PORT, () => {
       console.log("Listening on port " + PORT);
